@@ -1,0 +1,1 @@
+- không nên gọi sleep trong hàm xử lý ngắt
