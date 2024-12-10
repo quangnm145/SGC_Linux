@@ -1,0 +1,1 @@
+savedcmd_/home/quangnm41/SGC/SGC_Linux/Linux_Day2/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/quangnm41/SGC/SGC_Linux/Linux_Day2/Module.symvers -T /home/quangnm41/SGC/SGC_Linux/Linux_Day2/modules.order -i Module.symvers -e 

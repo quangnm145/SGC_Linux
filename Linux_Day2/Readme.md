@@ -104,12 +104,6 @@
     ```bash
     rmmod [options] [modulename]
     ```
-### Upload kernel automatic method by `modprobe` ###
-- `insmod` command in Linux systems is used to insert modules into the kernel.
-    ```bash
-    insmod [file name] [module-options...]
-    ```
-- The `rmmod` command in Linux is used to remove or unload a module from the kernel.
-    ```bash
-    rmmod [options] [modulename]
+### Upload kernel automatic method by `depmod` ###
+![depmod](./Day2_Task_depmod.png)
     ```

@@ -1,0 +1,1 @@
+savedcmd_/home/quangnm41/SGC/SGC_Linux/Linux_Day2/module_A.mod := printf '%s\n'   module_A.o | awk '!x[$$0]++ { print("/home/quangnm41/SGC/SGC_Linux/Linux_Day2/"$$0) }' > /home/quangnm41/SGC/SGC_Linux/Linux_Day2/module_A.mod
