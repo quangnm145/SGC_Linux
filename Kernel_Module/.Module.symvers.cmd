@@ -1,0 +1,1 @@
+cmd_/home/quangnm41/SGC/SGC_Linux/Linux_Day2/Module.symvers := sed 's/\.ko$$/\.o/' /home/quangnm41/SGC/SGC_Linux/Linux_Day2/modules.order | scripts/mod/modpost -m -a  -o /home/quangnm41/SGC/SGC_Linux/Linux_Day2/Module.symvers -e -i Module.symvers   -T -

@@ -1,0 +1,1 @@
+cmd_/home/quangnm41/SGC/SGC_Linux/Linux_Day2/modules.order := {   echo /home/quangnm41/SGC/SGC_Linux/Linux_Day2/module_A.ko;   echo /home/quangnm41/SGC/SGC_Linux/Linux_Day2/module_B.ko; :; } | awk '!x[$$0]++' - > /home/quangnm41/SGC/SGC_Linux/Linux_Day2/modules.order

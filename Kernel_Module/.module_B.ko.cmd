@@ -1,0 +1,1 @@
+cmd_/home/quangnm41/SGC/SGC_Linux/Linux_Day2/module_B.ko := ld -r  -m elf_x86_64 -z noexecstack   --build-id=sha1  -T scripts/module.lds -o /home/quangnm41/SGC/SGC_Linux/Linux_Day2/module_B.ko /home/quangnm41/SGC/SGC_Linux/Linux_Day2/module_B.o /home/quangnm41/SGC/SGC_Linux/Linux_Day2/module_B.mod.o;  true
