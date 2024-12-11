@@ -65,12 +65,12 @@ A sparse file has a large logical size but occupies less physical storage.
 
 - Example:
   ```bash
-  ls -ls sparse_file
+  ls -ls sourc_file
   ```
 
 - Use `du` to check the actual physical size of a file:
   ```bash
-  du -h sparse_file
+  du -h sourc_file
   ```
 
 ---
@@ -80,11 +80,47 @@ A sparse file has a large logical size but occupies less physical storage.
 1. **Using `truncate`:**
    - Create a file with a large logical size without writing data:
      ```bash
-     truncate -s 1G sparse_file
+     truncate -s 1M sourc_file
      ```
 
-2. **Using `dd` with lseek:**
-   - Write a portion of data into a large file:
-     ```bash
-     dd if=/dev/zero of=sparse_file bs=1 count=0 seek=1G
-     ```
+---
+
+## Task ##
+Write a program like cp that, when used to copy a regular file that contains holes (sequences of null bytes), also creates corresponding holes in the target file. 
+
+### Steps:
+
+#### 1. Create a new C file:
+  - Open a terminal and navigate to main project directory.
+  - Create a new file called `ex1.c`:
+    ```bash
+    touch ex1.c
+    ```
+  - Open the file in the `nano` text editor:
+    ```bash
+    nano ex1.c
+    ```
+#### 2. Write the program:
+  - In the `nano` editor, write the C code.
+  - Using `main()` function with arguments.
+  - Open source file with argument index 1 and destination file with index 2.
+  - Read each byte of the source file in turn and write to the destination file. If a hole is encountered, increase the hole number by 1. Until a different value is encountered, the hole will move the pointer position in the file and add the hole value by using `lseek()` to shift hole value from current position.
+    ```bash
+    lseek(output_fd, holes, SEEK_CUR);
+    ```
+  - Save the file by pressing `Ctrl + O` and then hit `Enter` to confirm.
+  - Exit the editor by pressing `Ctrl + X`.
+  ![Nano](./src/Day1_Task1_Nano.png)
+
+#### 3. Compile the Program with `gcc`:
+  - Compile your C program using the `gcc` compiler:
+    ```bash
+    gcc ex1.c -o ex1
+    ```
+  - This will create an executable file named `ex1`.
+
+#### 4. Run the Program:
+  - Run the compiled program using the following command:
+    ```bash
+    ./ex1 sourc_file dest_file
+    ```

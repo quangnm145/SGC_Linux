@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
     int input_fd, output_fd;
-    ssize_t numRead;
+    long numRead;
     char buf[BUF_SIZE], c;
  
     if (argc != 3) {
