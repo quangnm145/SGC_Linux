@@ -3,9 +3,8 @@
 #include <string.h>
 #include <fcntl.h>
 #include <unistd.h>
-// #include "tlpi_hdr.h"
 
-#ifndef BUF_SIZE /* Allow "cc -D" to override definition */
+#ifndef BUF_SIZE
 #define BUF_SIZE 1024
 #endif
 
@@ -42,7 +41,7 @@ int main(int argc, char *argv[])
                 holes = 0;
             }
             if (write(output_fd, &buf[i], 1) != 1) {
-                printf("couldnt write char to file");
+                printf("Error write char to file");
                 return 1;
             }
         }
